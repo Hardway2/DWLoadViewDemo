@@ -14,6 +14,8 @@
 		E083BA611B68A2C400460EAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E083BA601B68A2C400460EAA /* Images.xcassets */; };
 		E083BA641B68A2C400460EAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E083BA621B68A2C400460EAA /* LaunchScreen.xib */; };
 		E083BA701B68A2C400460EAA /* DWLoadViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E083BA6F1B68A2C400460EAA /* DWLoadViewDemoTests.m */; };
+		E083BA821B68A83300460EAA /* DWLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E083BA811B68A83300460EAA /* DWLoadView.m */; };
+		E083BA841B68A8BE00460EAA /* DWLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E083BA831B68A8BE00460EAA /* DWLoadView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		E083BA691B68A2C400460EAA /* DWLoadViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWLoadViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E083BA6E1B68A2C400460EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E083BA6F1B68A2C400460EAA /* DWLoadViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWLoadViewDemoTests.m; sourceTree = "<group>"; };
+		E083BA801B68A83300460EAA /* DWLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLoadView.h; sourceTree = "<group>"; };
+		E083BA811B68A83300460EAA /* DWLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLoadView.m; sourceTree = "<group>"; };
+		E083BA831B68A8BE00460EAA /* DWLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DWLoadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		E083BA521B68A2C400460EAA /* DWLoadViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E083BA7F1B68A56600460EAA /* DWLoadView */,
 				E083BA571B68A2C400460EAA /* AppDelegate.h */,
 				E083BA581B68A2C400460EAA /* AppDelegate.m */,
 				E083BA5A1B68A2C400460EAA /* ViewController.h */,
@@ -117,6 +123,16 @@
 				E083BA6E1B68A2C400460EAA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E083BA7F1B68A56600460EAA /* DWLoadView */ = {
+			isa = PBXGroup;
+			children = (
+				E083BA801B68A83300460EAA /* DWLoadView.h */,
+				E083BA811B68A83300460EAA /* DWLoadView.m */,
+				E083BA831B68A8BE00460EAA /* DWLoadView.xib */,
+			);
+			name = DWLoadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E083BA5F1B68A2C400460EAA /* Main.storyboard in Resources */,
+				E083BA841B68A8BE00460EAA /* DWLoadView.xib in Resources */,
 				E083BA641B68A2C400460EAA /* LaunchScreen.xib in Resources */,
 				E083BA611B68A2C400460EAA /* Images.xcassets in Resources */,
 			);
@@ -220,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E083BA5C1B68A2C400460EAA /* ViewController.m in Sources */,
+				E083BA821B68A83300460EAA /* DWLoadView.m in Sources */,
 				E083BA591B68A2C400460EAA /* AppDelegate.m in Sources */,
 				E083BA561B68A2C400460EAA /* main.m in Sources */,
 			);
@@ -350,6 +368,7 @@
 				INFOPLIST_FILE = DWLoadViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +379,7 @@
 				INFOPLIST_FILE = DWLoadViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -416,6 +436,7 @@
 				E083BA751B68A2C400460EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E083BA761B68A2C400460EAA /* Build configuration list for PBXNativeTarget "DWLoadViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +445,7 @@
 				E083BA781B68A2C400460EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

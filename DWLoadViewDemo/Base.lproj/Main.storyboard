@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDv-Lg-RI2">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="暂无内容"/>
+                                <connections>
+                                    <action selector="noContentAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jqK-LX-fxR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vth-hN-agu">
+                                <rect key="frame" x="270" y="355" width="60" height="30"/>
+                                <state key="normal" title="没有网络"/>
+                                <connections>
+                                    <action selector="noNetAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vif-iY-LMU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGk-Rq-3Gr">
+                                <rect key="frame" x="270" y="215" width="60" height="30"/>
+                                <state key="normal" title="正在加载"/>
+                                <connections>
+                                    <action selector="load" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eJg-Tg-ufH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vth-hN-agu" firstAttribute="top" secondItem="IDv-Lg-RI2" secondAttribute="bottom" constant="40" id="0sE-Kh-PbY"/>
+                            <constraint firstItem="IDv-Lg-RI2" firstAttribute="top" secondItem="PGk-Rq-3Gr" secondAttribute="bottom" constant="40" id="KVs-hK-fma"/>
+                            <constraint firstAttribute="centerY" secondItem="IDv-Lg-RI2" secondAttribute="centerY" id="cKZ-bh-oe7"/>
+                            <constraint firstAttribute="centerX" secondItem="IDv-Lg-RI2" secondAttribute="centerX" id="dnw-1d-ett"/>
+                            <constraint firstAttribute="centerX" secondItem="vth-hN-agu" secondAttribute="centerX" id="e1t-D0-RVw"/>
+                            <constraint firstAttribute="centerX" secondItem="PGk-Rq-3Gr" secondAttribute="centerX" id="lN9-ua-ffm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eUY-cu-0QO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="753" y="419"/>
         </scene>
     </scenes>
 </document>
