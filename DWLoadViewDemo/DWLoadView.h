@@ -17,13 +17,22 @@ typedef NS_ENUM(NSInteger, DWLoadViewType) {
     DWNoNetView
 };
 
+@protocol DWLoadViewDelegate <NSObject>
+
+@optional
+/**点击重新加载*/
+- (void)loadViewButtonClick;
+
+@end
+
 @interface DWLoadView : UIView
 /**加载视图类别*/
 @property (nonatomic, assign) DWLoadViewType viewType;
-/**没网情况下重新加载按钮*/
-@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
+@property (nonatomic, weak) id<DWLoadViewDelegate> delegate;
+
 /**加载视图*/
-+(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView;
++(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate;
 /**移除视图*/
 +(void)removeDWLoadViewOnSuperView:(UIView *)superView;
+
 @end

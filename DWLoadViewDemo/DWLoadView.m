@@ -13,15 +13,17 @@
 @interface DWLoadView()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @end
 
 @implementation DWLoadView
-+(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView {
++(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate{
     //移除之前的加载视图
     [self removeDWLoadViewOnSuperView:superView];
     
     DWLoadView *loadView = LoadView;
     loadView.frame = superView.frame;
+    loadView.delegate = delegate;
     switch (viewType) {
         case DWLoadingView:{
             loadView.activityView.hidden = NO;
@@ -51,6 +53,13 @@
         if ([view isKindOfClass:[DWLoadView class]]) {
             [view removeFromSuperview];
         }
+    }
+}
+
+- (IBAction)buttonClick {
+    
+    if([_delegate respondsToSelector:@selector(loadViewButtonClick)]){
+        [_delegate loadViewButtonClick];
     }
 }
 
