@@ -17,7 +17,7 @@
 @end
 
 @implementation DWLoadView
-+(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate{
++(void)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate{
     //移除之前的加载视图
     [self removeDWLoadViewOnSuperView:superView];
     
@@ -45,7 +45,6 @@
             break;
     }
     [superView addSubview:loadView];
-    return loadView;
 }
 
 +(void)removeDWLoadViewOnSuperView:(UIView *)superView{

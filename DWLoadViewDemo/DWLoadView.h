@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, DWLoadViewType) {
 @property (nonatomic, weak) id<DWLoadViewDelegate> delegate;
 
 /**加载视图*/
-+(instancetype)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate;
++(void)loadViewWithType:(DWLoadViewType)viewType onSuperView:(UIView *)superView WithDelegate:(id<DWLoadViewDelegate>)delegate;
 /**移除视图*/
 +(void)removeDWLoadViewOnSuperView:(UIView *)superView;
 
