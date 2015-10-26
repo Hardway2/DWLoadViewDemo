@@ -26,8 +26,6 @@ typedef NS_ENUM(NSInteger, DWLoadViewType) {
 @end
 
 @interface DWLoadView : UIView
-/**加载视图类别*/
-@property (nonatomic, assign) DWLoadViewType viewType;
 @property (nonatomic, weak) id<DWLoadViewDelegate> delegate;
 
 /**加载视图*/

@@ -48,6 +48,7 @@
 }
 
 +(void)removeDWLoadViewOnSuperView:(UIView *)superView{
+    
     for (UIView *view in superView.subviews) {
         if ([view isKindOfClass:[DWLoadView class]]) {
             [view removeFromSuperview];
