@@ -22,7 +22,7 @@
     [self removeDWLoadViewOnSuperView:superView];
     
     DWLoadView *loadView = LoadView;
-    loadView.frame = superView.frame;
+    loadView.frame = [UIScreen mainScreen].bounds;
     loadView.delegate = delegate;
     switch (viewType) {
         case DWLoadingView:{
